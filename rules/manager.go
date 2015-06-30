@@ -15,6 +15,7 @@ package rules
 
 import (
 	"fmt"
+	html_template "html/template"
 	"io/ioutil"
 	"path/filepath"
 	"strings"
@@ -84,7 +85,7 @@ type Rule interface {
 	String() string
 	// HTMLSnippet returns a human-readable string representation of the rule,
 	// decorated with HTML elements for use the web frontend.
-	HTMLSnippet(pathPrefix string) template.HTML
+	HTMLSnippet(pathPrefix string) html_template.HTML
 }
 
 // The Manager manages recording and alerting rules.
